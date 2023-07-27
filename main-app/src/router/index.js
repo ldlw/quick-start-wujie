@@ -6,20 +6,12 @@ const routes = [
   {
     path: '/pageA',
     name: 'pageA',
-    component: () => import('../views/page-a/index.vue'),
-  },
-  {
-    path: '/pageA/:path',
-    name: 'pageA1',
+    alias: ['/pageA/:path'],
     component: () => import('../views/page-a/index.vue'),
   },
   {
     path: '/pageB',
-    name: 'pageB',
-    component: () => import('../views/page-b/index.vue')
-  },
-  {
-    path: '/pageB/:path',
+    alias: ['/pageB/:path'],
     name: 'pageB',
     component: () => import('../views/page-b/index.vue')
   }
